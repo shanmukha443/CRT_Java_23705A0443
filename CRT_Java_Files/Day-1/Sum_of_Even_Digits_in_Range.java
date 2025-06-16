@@ -1,26 +1,26 @@
 public class Sum_of_Even_Digits_in_Range{
     public static void main(String[] args) {
-        int range=12;// Define the range up to which we want to count numbers with even digit sums
-        int count=0;// Count for two-digit numbers with even digit sum
-        int combined=0;// Variable to store the sum of digits of two-digit numbers
-        int singlecou=0;// Count for single digit even numbers
-        if(range<=99){// Check if the range is within two-digit numbers
+        int range=12;
+        int count=0;
+        int combined=0;
+        int singlecou=0;
+        if(range<=99){
             for(int i=1;i<=range;i++){
                 
-                if(i<=9){// Check if the number is a single digit
+                if(i<=9){
                     if (i%2==0){
-                        singlecou++;// Increment count for single digit even numbers
+                        singlecou++;
                     } 
                     
                 }
-                else{// If the number is two digits
+                else{
                     int x=i;
-                    while(x!=0){//
-                        int digit=x%10;// Extract the last digit
-                        combined=combined+digit;// Add the last digit to combined
+                    while(x!=0){
+                        int digit=x%10;
+                        combined=combined+digit;
                         x=x/10;
                     }
-                    if (combined%2==0){// Check if the sum of digits is even
+                    if (combined%2==0){
                         count++;
                     }
                     
